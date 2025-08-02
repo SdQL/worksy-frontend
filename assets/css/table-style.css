@@ -118,3 +118,15 @@ h3{
     border-color: var(--color-primary);
     box-shadow: 0 0 0 0.2rem rgba(13, 66, 255, 0.25);
 }
+
+/* Estilos para el texto de desarrollo */
+.desarrollo-texto {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #6c9bd2;
+    background-color: rgba(108, 155, 210, 0.1);
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 1px solid rgba(108, 155, 210, 0.3);
+    display: inline-block;
+}
