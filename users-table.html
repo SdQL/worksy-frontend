@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Administration</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/table-style.css">
+    <link href="assets/css/main.css" rel="stylesheet">
+
+</head>
+<body>
+<header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center">
+            <!-- Uncomment the line below if you also wish to use an image logo -->
+            <!-- <img src="assets/img/logo.png" alt=""> -->
+            <h1>Worksy</h1>
+        </a>
+        
+        <div class="d-flex align-items-center">
+            <span class="me-3" id="usuario-logueado"></span>
+            <button class="btn btn-outline-danger btn-sm" onclick="cerrarSesion()">
+                <i class="fa fa-sign-out"></i> Cerrar Sesión
+            </button>
+        </div>
+    </div>
+</header><!-- End Header -->
+
+<section class="main-content">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h3>Users Table</h3>
+            <div>
+                <button class="btn btn-primary" onclick="refrescarTabla()">
+                    <i class="fa fa-refresh"></i> Refrescar
+                </button>
+            </div>
+        </div>
+
+        <table class="table">
+            <thead>
+            <tr>
+                <th>User</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody id="users-tbody">
+                <!-- Los usuarios se cargarán dinámicamente aquí -->
+                <tr id="loading-row">
+                    <td colspan="4" class="text-center">
+                        <div class="spinner-border" role="status">
+                            <span class="sr-only">Cargando usuarios...</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="assets/js/users-table.js"></script>
+</body>
+</html>
