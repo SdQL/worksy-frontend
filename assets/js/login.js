@@ -7,7 +7,7 @@ async function iniciarSesion() {
     datos.email = document.getElementById("txtEmailIniciar").value;
     datos.password = document.getElementById("txtPasswordIniciar").value;
 
-    const request = await fetch("http://localhost:8080/auth/login", {
+    const request = await fetch("https://worksy-backend-production.up.railway.app/auth/login", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"

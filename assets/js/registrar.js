@@ -7,7 +7,7 @@ async function registrarUsuario() {
   datos.password = document.getElementById("txtPassword").value;
 
   //registrar usuario
-  const request = await fetch("http://localhost:8080/auth/register", {
+  const request = await fetch("https://worksy-backend-production.up.railway.app/auth/register", {
     method: "POST",
     headers: {
       Accept: "application/json",

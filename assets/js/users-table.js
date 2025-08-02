@@ -25,7 +25,7 @@ async function cargarUsuarios() {
         }
 
         // Hacer petición simple sin autenticación
-        const response = await fetch('http://localhost:8080/users', {
+        const response = await fetch('https://worksy-backend-production.up.railway.app/users', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
@@ -230,7 +230,7 @@ async function guardarCambiosUsuario(userId) {
         if (password) datosActualizar.password = password;
 
         // Hacer la petición PUT
-        const response = await fetch(`http://localhost:8080/users/${userId}`, {
+        const response = await fetch(`https://worksy-backend-production.up.railway.app/users/${userId}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
@@ -264,7 +264,7 @@ async function eliminarUsuario(userId, email) {
     }
 
     try {
-        const response = await fetch(`http://localhost:8080/users/${userId}`, {
+        const response = await fetch(`https://worksy-backend-production.up.railway.app/users/${userId}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'
@@ -373,7 +373,7 @@ async function crearNuevoUsuario() {
         };
 
         // Hacer la petición POST
-        const response = await fetch('http://localhost:8080/users', {
+        const response = await fetch('https://worksy-backend-production.up.railway.app/users', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
